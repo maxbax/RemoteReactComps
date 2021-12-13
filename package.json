@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Shared react components suite for company applications",
   "author": "MaxBax",
-  "homepage": "https://github.com/maxbax/remote-react-comps#readme",
+  "homepage": "https://github.com/maxbax/RemoteReactComps#readme",
   "bugs": {
-    "url": "https://github.com/maxbax/remote-react-comps/issues"
+    "url": "https://github.com/maxbax/RemoteReactComps/issues"
   },
   "main": "src/index.js",
   "keywords": [
@@ -43,7 +43,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maxbax/remote-react-comps.git"
+    "url": "git+https://github.com/maxbax/RemoteReactComps.git"
   },
   "scripts": {
     "test": "jest",
