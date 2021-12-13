@@ -1,0 +1,54 @@
+{
+  "name": "remote-react-comps",
+  "version": "1.0.0",
+  "description": "....",
+  "author": "MaxBax",
+  "homepage": "https://github.com/maxbax/remote-react-comps#readme",
+  "bugs": {
+    "url": "https://github.com/maxbax/remote-react-comps/issues"
+  },
+  "main": "src/index.js",
+  "keywords": [
+    "remote-components",
+    "react"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "debug": "4.3.3",
+    "prop-types": "15.7.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.16.0",
+    "@babel/core": "7.16.0",
+    "@babel/eslint-parser": "7.16.3",
+    "@babel/node": "7.16.0",
+    "@babel/plugin-proposal-class-properties": "7.16.0",
+    "@babel/preset-env": "7.16.4",
+    "@babel/preset-react": "7.16.0",
+    "eslint": "8.4.1",
+    "eslint-config-airbnb": "19.0.2",
+    "eslint-plugin-import": "2.25.3",
+    "eslint-plugin-jsx-a11y": "6.5.1",
+    "eslint-plugin-react": "7.27.1",
+    "eslint-plugin-react-hooks": "4.3.0",
+    "jest": "27.4.3"
+  },
+  "files": [
+    "lib/**",
+    "!**.test.**",
+    "README.md",
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxbax/remote-react-comps.git"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "build": "babel src --out-dir lib",
+    "prepare": "npm run build"
+  }
+}

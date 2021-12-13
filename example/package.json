@@ -1,0 +1,40 @@
+{
+    "name": "example-app",
+    "version": "0.0.1",
+    "main": "webpack.config.js",
+    "scripts": {
+        "start": "concurrently \"npm:start-remoteComps\" \"npm:start-app\"",
+        "build": "webpack --mode production",
+        "preinstall": "cd ./remoteComps && npm i",
+        "start-app": "webpack-dev-server --open --hot --mode development",
+        "start-remoteComps": "cd ./remoteComps && npm start"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "prop-types": "15.7.2",
+        "react": "17.0.2",
+        "react-dom": "17.0.2",
+        "remote-react-comps": "file:.."
+    },
+    "devDependencies": {
+        "@babel/cli": "7.16.0",
+        "@babel/core": "7.16.0",
+        "@babel/eslint-parser": "7.16.3",
+        "@babel/node": "7.16.0",
+        "@babel/plugin-proposal-class-properties": "7.16.0",
+        "@babel/preset-env": "7.16.4",
+        "@babel/preset-react": "7.16.0",
+        "babel-loader": "8.2.3",
+        "concurrently": "6.4.0",
+        "css-loader": "6.5.1",
+        "html-loader": "3.0.1",
+        "html-webpack-plugin": "5.5.0",
+        "node-sass": "7.0.0",
+        "sass-loader": "12.3.0",
+        "style-loader": "3.3.1",
+        "webpack": "5.65.0",
+        "webpack-cli": "4.9.1",
+        "webpack-dev-server": "4.6.0"
+    }
+}

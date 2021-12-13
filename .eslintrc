@@ -1,0 +1,32 @@
+{
+    "extends": [
+        "airbnb",
+        "plugin:react-hooks/recommended"
+    ],
+    "parserOptions": {
+        "requireConfigFile": false,
+        "ecmaVersion": 8,
+        "sourceType": "module",
+        "babelOptions": {
+            "presets": [
+                "@babel/preset-react"
+            ]
+        }
+    },
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "rules": {
+        "linebreak-style": "off",
+        "react/jsx-one-expression-per-line": "off",
+        "react/function-component-definition": [
+            2,
+            {
+                "namedComponents": "arrow-function",
+                "unnamedComponents": "arrow-function"
+            }
+        ]
+    },
+    "parser": "@babel/eslint-parser"
+}

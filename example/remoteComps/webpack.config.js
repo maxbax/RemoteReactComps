@@ -1,0 +1,83 @@
+// const HtmlWebPackPlugin = require('html-webpack-plugin');
+const path = require('path');
+
+module.exports = {
+  entry: './src/index.js',
+  experiments: {
+    outputModule: true,
+  },
+  output: {
+    //    filename: 'index.js',
+    //    path: path.resolve(__dirname, 'dist'),
+    //    filename: 'index.js',
+    filename: 'comps',
+    libraryTarget: 'commonjs',
+    publicPath: '/',
+
+  },
+  /*
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'comps.js',
+
+    library: 'comps',
+  },
+
+  output: {
+    filename: 'webpack-numbers.js',
+    library: 'pippo',
+    //    filename: './dist/scripts/[name].js',
+    //    library: ['App', 'components'],
+    // This will expose Window.App.components which will
+    // include your exported components e.g. ComponentA and ComponentB
+  }, */
+  /*  output: {
+    library: {
+      type: 'module',
+    },
+    libraryTarget: 'module',
+    module: true,
+  }, */
+  module: {
+    rules: [{
+      test: /\.(js|jsx)$/,
+      exclude: /node_modules/,
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: [
+            '@babel/preset-env',
+            '@babel/preset-react',
+          ],
+          plugins: [
+            '@babel/plugin-proposal-class-properties',
+          ],
+        },
+      },
+    },
+    {
+      test: /\.scss$/,
+      use: ['style-loader', 'css-loader', 'sass-loader'],
+    },
+      /*    {
+      test: /\.html$/,
+      use: [{
+        loader: 'html-loader',
+      }],
+    }, */
+    ],
+  },
+  /*  plugins: [
+    new HtmlWebPackPlugin({
+      //      template: './src/index.html',
+      //      filename: './index.html',
+    }),
+  ],
+*/ resolve: {
+    extensions: ['.jsx', '.js'],
+    alias: {
+      'remote-react-comps': path.resolve(__dirname, '../../src/index.js'),
+      react: path.resolve(__dirname, '../node_modules/react'),
+    },
+  },
+};
